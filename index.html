@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Code Quizz Challenge</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Code Quizz Challenge</h1>
+    <h3><a href="./highscore.html">View high Scores </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time Remaining: <span id="countdown">5</span></h3>
+      <div id="question-container" class="hide">
+      <!--Show the questions -->
+      <div id="question">Question</div>
+
+      <div id="answers-buttons" class="btn-grid">
+        <button class="btn" >Answer 1</button>
+        <button class="btn" >Answer 2</button>
+        <button class="btn" >Answer 3</button>
+        <button class="btn" >Answer 4</button>
+      </div>
+      </div>
+      <div class="controls"
+      <button id="start-btn">Start Quiz</button>
+      <button id="save-btn">Game Over-SaveScore</button>
+      </div>
+      <!--SAVE the initials of Player and the values -->
+      <div id="last-initials" class="hide">
+      <div class="card" >
+        <h2>Save your Score: <span id="score"></span></h2>
+        <form method="POST">
+          <div class="input-group">
+            <label for="lname">Your Initials</label>
+            <input type="text" name="lname" id="lname"  placeholder="Name" />
+          </div>
+          <button id="save">Game Over-SaveScore</button>
+        </form> 
+       </div>
+      </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
