@@ -10,3 +10,7 @@ When all questions are answered or the timer reaches 0
 the game is over.
 When the game is over, the user has the option of saving
 his initials and his score.
+
+Application Page Link : https://bkoala.github.io/Code_quiz/
+
+Application Screen Shot : ![Screenshot](Quizz_screenshot.png)
