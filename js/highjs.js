@@ -2,23 +2,16 @@
 var tScore = document.getElementById("#sc_t");
 var scoreList = document.querySelector("#score-list");
 
-// The following function renders items in a todo list as <li> elements
+// The following function renders items in a list of elements
 function renderTodos() {
 // Clear todoList element and update todoCountSpan
-console.log("stared HTL");
 scoreList.innerHTML = "";
-// todoCountSpan.textContent = todos.length;
 // Render a new li for each todo
 for (var i = 0; i < todos.length; i++) {
   var todo = todos[i];
   var liT = document.createElement("p");
   liT.textContent = todo.userInitials + "   :    " +todo.userscore;
   liT.setAttribute("css", "font-size:15px");
-
-  //var button = document.createElement("button");
- // button.textContent = "Complete ✔️";
-
-//  li.appendChild(button);
   scoreList.appendChild(liT);
 }
 }

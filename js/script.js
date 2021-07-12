@@ -9,6 +9,8 @@ let shuffleQuestions, curQuestionIndex;
 var timeLeft =5;
 const highScores=[];
 var questionElement =document.getElementById('question');
+var theLine=document.getElementById('hrline');
+var answerElement=document.getElementById('ifanswer');
 var answerButtonElement=document.getElementById('answers-buttons');
 var initialInput = document.querySelector("#lname");
 var signUpButton = document.querySelector("#save");
@@ -52,7 +54,7 @@ saveButton.classList.add('hide');
 
 //Reset state
 function resetState(){
- //submitButton.classList.add('hide');
+ 
   while( answerButtonElement.firstChild){
     answerButtonElement.removeChild(answerButtonElement.firstChild);
   }
@@ -62,15 +64,21 @@ function resetState(){
 
 function selectAnswer(e){
  var selected=e.target;
+ //Put a divider line
+  theLine.classList.remove('hide');
+ //Show the answer on screen
+ answerElement.classList.remove("hide");
  //Increase the total score for a correct answer
  if(selected.dataset.correct){ 
      totalScore ++;
+     answerElement.innerText="Correct!";
    }
  else{ 
     //Decrease time left by one second when the user misses a question
     var timeOne=1;
     countdown(timeOne);
-    timeLeft--;
+    timeLeft--;   
+    answerElement.innerText="Wrong!";
     if (timeLeft <= 0){
         //End the Game
           curQuestionIndex=shuffleQuestions.length+1;
@@ -79,7 +87,7 @@ function selectAnswer(e){
     }
     timerEl.textContent = timeLeft;
 }
-  
+   
   Array.from(answerButtonElement.children).forEach(button=> {
      setStatusClass(button,button.dataset.correct)
   })
@@ -97,6 +105,7 @@ function selectAnswer(e){
     
   }
 }
+
 //Set the store value based on element status
 function setStatusClass(element,correct){
   clearStatusClass(element);

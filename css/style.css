@@ -44,6 +44,14 @@ h2 {
 #question{
   font-size:25px;
 }
+#ifanswer{
+  font-size:20px;
+  color:brown;
+}
+#hrline{
+  color:blue;
+  margin:20px 30px;
+}
 .btn{
   background-color: aqua;
   border:1px solid;
